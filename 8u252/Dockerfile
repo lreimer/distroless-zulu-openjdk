@@ -12,4 +12,4 @@ COPY --from=builder $JAVA_HOME $JAVA_HOME
 COPY --from=amd64/busybox:1.31.1 /bin/busybox /busybox/busybox
 RUN ["/busybox/busybox", "--install", "/bin"]
 
-ENTRYPOINT ["/bin/sh"]
+CMD ["/bin/sh", "-c", "java -version"]

@@ -1,4 +1,4 @@
-ZULU_VERSION=8u252
+ZULU_VERSION=8u262
 
 image:
 	docker build --build-arg ZULU_VERSION=${ZULU_VERSION} -t distroless-zulu-openjdk:${ZULU_VERSION} .

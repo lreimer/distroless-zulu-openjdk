@@ -1,4 +1,4 @@
-ZULU_VERSION=8u252
+ZULU_VERSION=11.0.8
 
 image:
 	docker build --build-arg ZULU_VERSION=${ZULU_VERSION} -t distroless-zulu-openjdk:${ZULU_VERSION} .
@@ -9,9 +9,9 @@ image:
 tag: image
 	@echo ""
 	docker tag distroless-zulu-openjdk:${ZULU_VERSION} qaware/distroless-zulu-openjdk:${ZULU_VERSION}
-	docker tag distroless-zulu-openjdk:${ZULU_VERSION} qaware/distroless-zulu-openjdk:8
+	docker tag distroless-zulu-openjdk:${ZULU_VERSION} qaware/distroless-zulu-openjdk:11
 
 push: tag
 	@echo ""
 	docker push qaware/distroless-zulu-openjdk:${ZULU_VERSION}
-	docker push qaware/distroless-zulu-openjdk:8
+	docker push qaware/distroless-zulu-openjdk:11
